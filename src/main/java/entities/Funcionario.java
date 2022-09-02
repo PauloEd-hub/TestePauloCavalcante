@@ -20,6 +20,15 @@ public class Funcionario {
         this.dependentes = dependentes;
     }
 
+    @Override
+    public String toString() {
+        return "Funcionario{" +
+                "nome='" + nome + '\'' +
+                ", matricula=" + matricula +
+                ", setor=" + setor +
+                ", dependentes=" + dependentes +
+                '}';
+    }
 
     public String getNome() {
 

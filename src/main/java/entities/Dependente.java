@@ -4,25 +4,23 @@ import java.util.Date;
 import java.util.UUID;
 
 public class Dependente {
-    private UUID idDependente;
     private String nome;
     private Date dataNascimento;
 
     public Dependente() {
     }
 
-    public Dependente(UUID idDependente, String nome, Date dataNascimento) {
-        this.idDependente = idDependente;
+    public Dependente(String nome, Date dataNascimento) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
     }
 
-    public UUID getIdDependente() {
-        return idDependente;
-    }
-
-    public void setIdDependente(UUID idDependente) {
-        this.idDependente = idDependente;
+    @Override
+    public String toString() {
+        return "Dependente{" +
+                "nome='" + nome + '\'' +
+                ", dataNascimento=" + dataNascimento +
+                '}';
     }
 
     public String getNome() {

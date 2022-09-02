@@ -6,7 +6,6 @@ import entities.Setor;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -24,11 +23,16 @@ public class Program {
         int qtdFuncionarios = sc.nextInt();
         sc.nextLine();
 
+        SimpleDateFormat sdfFuncionario = new SimpleDateFormat("dd/MM/yyyy");
+
         for (int i = 1; i <= qtdFuncionarios; i++) {
             System.out.println("Funcionário n° " + i);
 
             System.out.print("Nome:");
             String nome = sc.nextLine();
+
+            System.out.print("Data de Nascimento do funcionário:");
+            Date dataNascimentoFunc = sdfFuncionario.parse(sc.nextLine());
 
             System.out.println("MATRÍCULA");
             System.out.println("Digite a matrícula do funcionário n° " + i);
@@ -72,7 +76,7 @@ public class Program {
 
             System.out.println("====================================");
 
-            Funcionario funcionario = new Funcionario(nome, matricula, new Setor(codSetor, descSetor), dependentes);
+            Funcionario funcionario = new Funcionario(nome, matricula, new Setor(codSetor, descSetor),dataNascimentoFunc,  dependentes);
 
             funcionarios.add(funcionario);
         }

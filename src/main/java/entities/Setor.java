@@ -14,10 +14,9 @@ public class Setor {
 
     @Override
     public String toString() {
-        return "Setor{" +
+        return "Setor: " +
                 "codigo=" + codigo +
-                ", descricao='" + descricao + '\'' +
-                '}';
+                ", descricao='" + descricao + '\'';
     }
 
     public int getCodigo() {

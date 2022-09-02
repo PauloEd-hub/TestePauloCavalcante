@@ -17,10 +17,9 @@ public class Dependente {
 
     @Override
     public String toString() {
-        return "Dependente{" +
+        return "Dependente: " +
                 "nome='" + nome + '\'' +
-                ", dataNascimento=" + dataNascimento +
-                '}';
+                ", dataNascimento=" + dataNascimento;
     }
 
     public String getNome() {
